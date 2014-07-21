@@ -229,8 +229,8 @@ function.
 ## Create a new factor variable in the dataset with two levels - "weekday" and
 ## "weekend" indicating whether a given date is a weekday or weekend day
 dfcomplete$daytype <- as.factor(ifelse(weekdays(dfcomplete$date) == "Saturday" |
-                                       weekdays(dfcomplete$date) == "Sunday",
-                                "weekend", "weekday"))
+                                               weekdays(dfcomplete$date) == "Sunday",
+                                       "1", "2"))
 
 ## Order the factors according to the requested levels
 levels(dfcomplete$daytype) <- c("weekend", "weekday")
